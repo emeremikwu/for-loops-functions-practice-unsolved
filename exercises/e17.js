@@ -7,7 +7,12 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
+  for(const elem of array){
+    if(elem.toLowerCase() === value.toLowerCase())
+      return true
+  }
 
+  return false
 }
 
 

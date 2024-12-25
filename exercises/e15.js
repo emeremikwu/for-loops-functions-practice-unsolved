@@ -6,9 +6,11 @@
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
-
+  let result = []
+  for(const chr of arr1){result.push(chr)}
+  for(const chr of arr2){result.push(chr)}
+  return result
 }
-
 
 
 // === TEST YOURSELF ===

@@ -7,10 +7,18 @@
 
 export function flatArrays(array) {
   // Your code goes here...
+  let flattened = []
+  for(const element of array){
+    if(element instanceof Array){
+      for(const iterable of element){flattened.push(iterable)}
+      continue;
+    }
 
+    flattened.push(element)
+  }
+
+  return flattened
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"

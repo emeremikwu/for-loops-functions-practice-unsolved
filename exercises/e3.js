@@ -10,9 +10,14 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  let total = 0
+  for (let i = 0; i < array.length; i++) {
+    total += array[i]
+  }
+
+  return total / array.length;
 
 }
-
 
 /** 
  * PART 2
@@ -23,9 +28,15 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
+  let total = 0
+  const reExp = /\d/g;
+  const matches = str.match(reExp) ?? []
+  for(const match of matches) {
+    total += parseInt(match)
+  }
 
+  return total
 }
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"

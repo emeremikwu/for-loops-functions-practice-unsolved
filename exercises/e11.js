@@ -6,7 +6,16 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  let withdrawalSums = []
 
+  for(const account of array){
+    let accumulate = 0;
+    for(const withdrawl of account.withdrawals ?? [])
+      accumulate += withdrawl
+    withdrawalSums.push(accumulate)
+  }
+
+  return withdrawalSums;
 }
 
 // === TEST YOURSELF ===

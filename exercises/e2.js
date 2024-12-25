@@ -4,7 +4,15 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
+  let arr = []
 
+  for (let i = 0; i < max; i++) {
+    let sqrt = Math.sqrt(i)
+    if(sqrt == Math.round(sqrt))
+      arr.push(i)
+  }
+  
+    return arr; 
 }
 
 // === TEST YOURSELF ===
