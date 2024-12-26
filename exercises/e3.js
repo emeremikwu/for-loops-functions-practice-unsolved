@@ -29,10 +29,10 @@ export function getAverage(array) {
 export function getStringSum(str) {
   // Your code goes here...
   let total = 0
-  const reExp = /\d/g;
-  const matches = str.match(reExp) ?? []
-  for(const match of matches) {
-    total += parseInt(match)
+  
+  for (let i = 0; i < str.length; i++) {
+    if(!isNaN(str[i])) 
+      total += Number(str[i])
   }
 
   return total
